@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pigeonhole principle</title>
+    <style>
+        .bird1{
+            width:110px;
+            height:100px;
+             background-image: url("final.png");
+             background-repeat: no repeat;
+             background-size: cover;
+             
+             animation-name: fly1;
+             animation-duration: 4s;
+             animation-iteration-count: 1;
+             animation-timing-function: steps(19);
+            position: relative;
+            
+        }.bird2{
+            width:110px;
+            height:100px;
+             background-image: url("finalrev.png");
+             background-repeat: no repeat;
+             background-size: cover;
+             
+             animation-name: fly2;
+             animation-duration: 4s;
+             animation-iteration-count: 1;
+             animation-timing-function: steps(19);
+            position: relative;
+            
+        }
+        @keyframes fly1 {
+            0%{
+                background-position: 0px 0px;
+                left: 0%;
+            }
+            100%{
+                background-position: -2090px 0px;
+            left:100%; 
+            }
+        }
+        @keyframes fly2 {
+            0%{
+                background-position-: 0px 0px;
+                left: 100%;
+            }
+            100%{
+                background-position: 2090px 0px;
+            left:0%; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bird1"></div>
+    <div class="bird2"></div>
+</body>
+</html>
