@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: inline;
+        }
+        .first {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            animation-name: one;
+            animation-duration: 4s;
+            animation-fill-mode: forwards;
+            display: inline-flex;
+        }
+
+        .second {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            animation-name: two;
+            animation-duration: 4s;
+            animation-fill-mode: forwards;
+            display: inline-flex;
+
+        }
+
+        .third {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            animation-name: three;
+            animation-duration: 4s;
+            animation-fill-mode: forwards;
+            display: inline-flex;
+        }
+
+        .fourth {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            animation-name: four;
+            animation-duration: 4s;
+            animation-fill-mode: forwards;
+            display: inline-flex;
+        }
+
+        @keyframes one {
+            0% {
+                background-color: brown;
+                /* background-image: url("images/"); */
+                left: 0px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: brown;
+                left: 45vw;
+                top: 0px;
+            }
+
+            100% {
+                background-color: brown;
+                left: 45vw;
+                top: 50vh;
+            }
+        }
+
+        @keyframes two {
+            0% {
+                background-color: brown;
+                background-image: url("images/");
+                left: 100vw;
+                top: 0vh;
+            }
+
+            50% {
+                background-color: brown;
+                left: 45vw;
+                top: 0vh;
+            }
+
+            100% {
+                background-color: brown;
+                left: 45vw;
+                top: 50vh;
+            }
+        }
+
+        @keyframes three {
+            0% {
+                background-color: brown;
+                background-image: url("images/");
+                left: 0vw;
+                top: 88vh;
+            }
+
+            50% {
+                background-color: brown;
+                left: 30.6vw;
+                top: 88vh;
+            }
+
+            100% {
+                background-color: brown;
+                left: 30.6vw;
+                top: 62.8vh;
+            }
+
+        }
+
+        @keyframes four {
+            0% {
+                background-color: brown;
+                background-image: url("images/");
+                left: 72vw;
+                top: 88vh;
+            }
+
+            50% {
+                background-color: brown;
+                left: 30.6vw;
+                top: 88vh;
+            }
+
+            100% {
+                background-color: brown;
+                left: 30.6vw;
+                top: 62.8vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="first"></div>
+    <div class="second"></div>
+    <div class="third"></div>
+    <div class="fourth"></div>
+</body>
+
+</html>
