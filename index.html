@@ -4,60 +4,264 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/box.css">
     <title>pigeonhole principle</title>
+    <script>
+        
+        setTimeout(function hide1()
+        {document.getElementById("pi1").style.visibility="visible";},5000);
+
+        setTimeout(function hide1()
+        {document.getElementById("pi3").style.visibility="visible";},6000)
+
+        setTimeout(function hide1()
+        {document.getElementById("pi2").style.visibility="visible";},7000)
+
+        setTimeout(function hide1()
+        {document.getElementById("pi4").style.visibility="visible";},8000)
+
+
+        var f = document.getElementById('pi5');
+document.addEventListener('click', function(ev){
+    f.style.transform = 'translateY('+(ev.clientY-25)+'px)';
+    f.style.transform += 'translateX('+(ev.clientX-25)+'px)';
+},false);
+        </script>
     <style>
+        body{
+            overflow: hidden;
+        }
+        
         .bird1{
-            width:110px;
-            height:100px;
-             background-image: url("final.png");
+            width:146px;
+            height:120px;
+            margin-top: 20%;
+            
              background-repeat: no repeat;
              background-size: cover;
              
              animation-name: fly1;
              animation-duration: 4s;
+             animation-delay: 1s;
              animation-iteration-count: 1;
-             animation-timing-function: steps(19);
+             animation-timing-function: steps(16);
             position: relative;
             
         }.bird2{
-            width:110px;
-            height:100px;
-             background-image: url("finalrev.png");
+            width:146px;
+            height:120px;
+            margin-top: 5%;
              background-repeat: no repeat;
              background-size: cover;
              
              animation-name: fly2;
-             animation-duration: 4s;
+             animation-duration:4s;
+             animation-delay: 3s;
              animation-iteration-count: 1;
-             animation-timing-function: steps(19);
-            position: relative;
+             animation-timing-function: steps(16);
+            position: absolute;
             
         }
+
+        .bird3{
+            width:146px;
+            height:120px;
+            margin-top: 3%;
+             background-repeat: no repeat;
+             background-size: cover;
+             
+             animation-name: fly3;
+             animation-duration:4s;
+             animation-delay: 2s;
+             animation-iteration-count: 1;
+             animation-timing-function: steps(16);
+            position: absolute;
+            
+        }
+
+        .bird4{
+            width:146px;
+            height:120px;
+            margin-top: -7%;
+             background-repeat: no repeat;
+             background-size: cover;
+             
+             animation-name: fly4;
+             animation-duration:4s;
+             animation-delay: 4s;
+             animation-iteration-count: 1;
+             animation-timing-function: steps(16);
+            position: absolute;
+            
+        }
+
+        .bird5{
+            width:146px;
+            height:120px;
+            margin: -20%;
+             background-repeat: no repeat;
+             background-size: cover;
+             
+             animation-name: fly5;
+             animation-duration:4s;
+             animation-delay: 8s;
+             animation-iteration-count: infinite;
+             animation-timing-function: steps(16);
+            position: absolute;
+            
+        }
+        .pi1{
+visibility: hidden;
+            background-image: url("img/standing.png");
+            background-repeat: no-repeat;
+            width:146px;
+            height:120px;
+            display: inline;
+            position: absolute;
+            background-size:contain;
+            left: 37%;
+            top:45%;
+            
+        }
+        .pi4{
+            visibility: hidden;
+background-image: url("img/standing.png");
+background-repeat: no-repeat;
+width:146px;
+height:120px;
+display: inline;
+position: absolute;
+background-size:contain;
+right: 39%;
+top:45%;
+}
+.pi2{
+    visibility: hidden;
+background-image: url("img/standing.png");
+background-repeat: no-repeat;
+width:146px;
+height:120px;
+display: inline;
+position: absolute;
+background-size:contain;
+right: 39%;
+top:68%;
+}
+.pi3{
+    visibility: hidden;
+background-image: url("img/standing.png");
+background-repeat: no-repeat;
+width:146px;
+height:120px;
+display: inline;
+position: absolute;
+background-size:contain;
+left: 37%;
+top:68%;
+}
+
+.pi5{
+    visibility: hidden;
+background-image: url("img/standing.png");
+background-repeat: no-repeat;
+width:146px;
+height:120px;
+display: inline;
+position: absolute;
+background-size:contain;
+left: 37%;
+top:68%;
+transition: transform 1s;
+}
         @keyframes fly1 {
             0%{
+                background-image: url("img/final.png");
                 background-position: 0px 0px;
-                left: 0%;
+                left: -20%;
+               
             }
             100%{
-                background-position: -2090px 0px;
-            left:100%; 
+                background-image: url("img/final.png");
+                background-position: -2093px 0px;
+            left:30%; 
+            
+            }
+        }
+        @keyframes fly3 {
+            0%{
+                background-image: url("img/final.png");
+                background-position: 0px 0px;
+                left: -20%;
+               
+            }
+            100%{
+                background-image: url("img/final.png");
+                background-position: -2093px 0px;
+            left:30%; 
+            
             }
         }
         @keyframes fly2 {
             0%{
+                background-image: url("../img/finalrev.png");
                 background-position-: 0px 0px;
-                left: 100%;
+                right: -20%;
             }
             100%{
-                background-position: 2090px 0px;
-            left:0%; 
+                background-image: url("../img/finalrev.png");
+                background-position: -2093px 0px;
+            right:40%; 
             }
         }
+        @keyframes fly4 {
+            0%{
+                background-image: url("../img/finalrev.png");
+                background-position-: 0px 0px;
+                right: -20%;
+            }
+            100%{
+                background-image: url("../img/finalrev.png");
+                background-position: -2093px 0px;
+            right:40%; 
+            }
+        }
+
+        @keyframes fly5 {
+            0%{
+                background-image: url("img/final.png");
+                background-position: 0px 0px;
+                left: 0%;
+               
+            }
+            100%{
+                background-image: url("img/final.png");
+                background-position: -2093px 0px;
+            left:120%; 
+            
+            }
+        }
+        
     </style>
 </head>
 <body>
+    <div class="bird5"></div>
     <div class="bird1"></div>
     <div class="bird2"></div>
+    <div class="bird3"></div>
+    <div class="bird4"></div>
+
+    <div class="main first"></div>
+    <div class="main second"></div>
+    <div class="main third"></div>
+    <div class="main fourth"></div>
+
+    <div class ="pigeon">
+<div class="pi1" id="pi1"></div>
+<div class="pi2" id="pi2"></div>
+<div class="pi3"  id="pi3"></div>
+<div class="pi4"  id="pi4"></div>
+<div class="pi5"  id="pi5"></div>
+    </div>
 </body>
 </html>
 <!--commit-->
