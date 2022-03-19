@@ -21,11 +21,7 @@
         {document.getElementById("pi4").style.visibility="visible";},8000)
 
 
-        var f = document.getElementById('pi5');
-document.addEventListener('click', function(ev){
-    f.style.transform = 'translateY('+(ev.clientY-25)+'px)';
-    f.style.transform += 'translateX('+(ev.clientX-25)+'px)';
-},false);
+       
         </script>
     <style>
         body{
@@ -160,19 +156,6 @@ left: 37%;
 top:68%;
 }
 
-.pi5{
-    visibility: hidden;
-background-image: url("img/standing.png");
-background-repeat: no-repeat;
-width:146px;
-height:120px;
-display: inline;
-position: absolute;
-background-size:contain;
-left: 37%;
-top:68%;
-transition: transform 1s;
-}
         @keyframes fly1 {
             0%{
                 background-image: url("img/final.png");
@@ -203,24 +186,24 @@ transition: transform 1s;
         }
         @keyframes fly2 {
             0%{
-                background-image: url("../img/finalrev.png");
-                background-position-: 0px 0px;
+                background-image: url("img/finalrev.png");
+                background-position: 0px 0px;
                 right: -20%;
             }
             100%{
-                background-image: url("../img/finalrev.png");
+                background-image: url("img/finalrev.png");
                 background-position: -2093px 0px;
             right:40%; 
             }
         }
         @keyframes fly4 {
             0%{
-                background-image: url("../img/finalrev.png");
-                background-position-: 0px 0px;
+                background-image: url("img/finalrev.png");
+                background-position: 0px 0px;
                 right: -20%;
             }
             100%{
-                background-image: url("../img/finalrev.png");
+                background-image: url("img/finalrev.png");
                 background-position: -2093px 0px;
             right:40%; 
             }
