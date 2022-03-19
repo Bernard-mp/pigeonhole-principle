@@ -20,6 +20,8 @@
         setTimeout(function hide1()
         {document.getElementById("pi4").style.visibility="visible";},8000)
 
+        setTimeout(function hide1()
+        {document.getElementById("pi5").style.visibility="visible";},12000);
 
        
         </script>
@@ -94,14 +96,14 @@
         .bird5{
             width:146px;
             height:120px;
-            margin: -20%;
+            margin: -10%;
              background-repeat: no repeat;
              background-size: cover;
              
              animation-name: fly5;
              animation-duration:4s;
              animation-delay: 8s;
-             animation-iteration-count: infinite;
+             animation-iteration-count: 1;
              animation-timing-function: steps(16);
             position: absolute;
             
@@ -156,6 +158,18 @@ left: 37%;
 top:68%;
 }
 
+.pi5{
+    visibility: hidden;
+background-image: url("img/thinking.png");
+background-repeat: no-repeat;
+width:160px;
+height:132px;
+display: inline;
+position: absolute;
+background-size:contain;
+left: 44%;
+top:23%;
+}
         @keyframes fly1 {
             0%{
                 background-image: url("img/final.png");
@@ -219,7 +233,7 @@ top:68%;
             100%{
                 background-image: url("img/final.png");
                 background-position: -2093px 0px;
-            left:120%; 
+            left:55%; 
             
             }
         }
