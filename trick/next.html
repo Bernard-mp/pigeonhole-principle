@@ -1,0 +1,176 @@
+<!--
+    <p class="num" id="num"></p>
+    <p id="su"></p>
+    <script>
+        var n =(localStorage.getItem("keynum"));
+        if(n=='A')
+        n=1;
+    
+        document.getElementById("num").innerHTML= n;
+     </script>
+    -->
+    <!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Magic Card</title>
+  <link rel="stylesheet" href="next.css">
+
+</head>
+<body>
+    <h1>The hidden card is</h1>
+
+<div class="card">
+    
+        <div class="deck mid" id="mid"></div>
+        <div class="cardnum" id ="cardnum"></div>
+        <div class="cardnumr" id ="cardnumr"></div>
+    
+   
+</div>
+
+<div class="bottom">
+    
+    
+    <a href="index.html"><button class="botbutton proceed">
+      back to home
+    </button>
+    </a>
+    </div>
+    <script>
+        var keysuit =localStorage.getItem("keysuit");
+        var keynum =localStorage.getItem("keynum");
+        var firstnum =localStorage.getItem("firstnum");
+        var firstsuit =localStorage.getItem("firstsuit");
+        var secondnum =localStorage.getItem("secondnum");
+        var secondsuit =localStorage.getItem("secondsuit");
+        var thirdnum =localStorage.getItem("thirdnum");
+        var thirdsuit =localStorage.getItem("thirdsuit");
+
+
+    
+function su(inp){
+if (inp == "♣")
+return 0;
+else
+if (inp == "♦")
+return 13;
+else
+if (inp == "♥")
+return 26;
+else
+if (inp == "♠")
+return 39;
+
+}
+
+function suitno(ninp){
+    if(ninp=="A")
+    return 1;
+    else
+    if (ninp=="K")
+    return 13;
+    else if(ninp=="Q")
+    return 12;
+    else if(ninp=="J")
+    return 11;
+    else
+    return ninp;
+
+}
+
+firstnum=suitno(firstnum);
+secondnum=suitno(secondnum);
+thirdnum=suitno(thirdnum);
+keynum=suitno(keynum);
+
+firstsuit=su(firstsuit);
+secondsuit=su(secondsuit);
+thirdsuit=su(thirdsuit);
+
+
+var first=parseInt(firstnum)+firstsuit;
+var second=parseInt(secondnum)+secondsuit;
+var third=parseInt(thirdnum)+thirdsuit;
+
+        //make the card multiple
+
+/*1 = low, middle, high
+ 2 = low, high, middle
+ 3 = middle, low, high
+ 4 = middle, high, low
+ 5 = high, low, middle
+ 6 = high, middle, low.*/
+
+ //here first=low 
+ //second = middle
+ //third = high
+var addnum=0;
+ if(first<second && first<third && second<third)
+ addnum=1;
+ else
+ if (first<second && first<third &&third<second)
+ addnum=2;
+ else
+ if(first<third && second<first && second<third)
+addnum=3;
+else if (first<second && third<first && third < second)
+addnum=4;
+else if(second<first && second<third && third<first)
+addnum=5;
+else
+if (second<first && third<first && third < second)
+addnum = 6;
+console.log(addnum);
+
+keynum=(parseInt(keynum)+addnum)%13;
+if(keynum==0)
+keynum=13;
+
+console.log(keynum);
+
+        //the display after the calculation
+
+    function sn(np){
+    if(np=="1")
+    return "A";
+    else
+    if (np=="13")
+    return "K";
+    else if(np=="12")
+    return "Q";
+    else if(np=="11")
+    return "J";
+    else
+    return np;
+
+}
+keynum=sn(keynum);
+console.log(keynum);
+        if (keysuit == '♥' || keysuit == '♦')
+              {
+                document.getElementById("mid").style.color = "red";
+                document.getElementById("cardnum").style.color = "red";
+                document.getElementById("cardnumr").style.color = "red";
+                document.getElementById("mid").innerHTML= keysuit;
+        document.getElementById("cardnum").innerHTML= keynum;
+        document.getElementById("cardnumr").innerHTML= keynum;
+              }
+              else
+              { document.getElementById("mid").style.color = "black";
+                document.getElementById("cardnum").style.color = "black";
+                document.getElementById("cardnumr").style.color = "black";
+                document.getElementById("mid").innerHTML= keysuit;
+        document.getElementById("cardnum").innerHTML= keynum;
+        document.getElementById("cardnumr").innerHTML= keynum;  }
+             
+    
+
+
+
+
+        
+             
+     </script>
+</body>
+</html>

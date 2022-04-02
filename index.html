@@ -23,11 +23,17 @@
         setTimeout(function hide1()
         {document.getElementById("pi5").style.visibility="visible";},12000);
 
+        setTimeout(function hide1()
+        {document.getElementById("txt").style.visibility="visible";},12200);
        
         </script>
     <style>
         body{
             overflow: hidden;
+            background-image: url("img/Screenshot\ \(80\).png");
+            background-repeat: no-repeat;
+            background-size: cover;
+           
         }
         
         .bird1{
@@ -162,14 +168,46 @@ top:68%;
     visibility: hidden;
 background-image: url("img/thinking.png");
 background-repeat: no-repeat;
-width:160px;
-height:132px;
+width:180px;
+height:142px;
 display: inline;
 position: absolute;
 background-size:contain;
-left: 44%;
-top:23%;
+left: 45%;
+top:22%;
 }
+
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+ 
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  display: inline-block;
+      font-size: 50px;
+	  text-align: left;
+
+
+      animation-name: txt;
+             
+             animation-delay: 2s;
+             animation-iteration-count: 1;
+            position: absolute;
+            margin-top: -400px;
+            margin-left: 25%;
+            visibility: hidden;
+}
+
+
         @keyframes fly1 {
             0%{
                 background-image: url("img/final.png");
@@ -237,7 +275,20 @@ top:23%;
             
             }
         }
-        
+        @keyframes txt{
+            0%{
+               
+                background-position: 0px 0px;
+                left: -20%;
+               
+            }
+            100%{
+               
+                background-position: -2093px 0px;
+            left:30%; 
+            
+            }
+        }
     </style>
 </head>
 <body>
@@ -259,6 +310,7 @@ top:23%;
 <div class="pi3"  id="pi3"></div>
 <div class="pi4"  id="pi4"></div>
 <div class="pi5"  id="pi5"></div>
+<h3 class="animate-charcter" id="txt"> The Pigeon hole Principle</h3>
     </div>
 </body>
 </html>

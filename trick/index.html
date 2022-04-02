@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cards</title>
+    
+
+    <link rel="stylesheet" href="card.css" />
+    <script type="text/javascript" src="script.js"></script>
+  
+  <body>
+      <h1 style="text-align: center; margin-top:30px; margin-bottom: 0px;">Let's try a magic!!</h1>
+      <form name="form1" action="next.html" method="get">
+ <section class="car-list">
+      <article class="car">
+        <header class="car-header">
+          <p>CARD 1</p>
+          <h2>Keycard</h2>
+        </header>
+        <div class="tags">
+          <select class="drop num" onclick="getOption()" required >
+            <option disabled selected hidden value="" >Number</option>
+            <option value="A">A</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="J">J</option>
+            <option value="Q">Q</option>
+            <option value="K">K</option>
+            
+
+          </select>
+          <select class="drop suit"  onclick="getOption()" required>
+            <option disabled selected hidden value="" >Suits</option>
+            <option value="♣">♣ Clubs</option>
+            <option value="♦">♦ Diamond</option>
+            <option value="♥">♥ Heart</option>
+            <option value="♠">♠ Spades</option>
+          </select>
+         
+
+          </div>
+          
+        <div class="single">
+            <div class="deck card" id="card"></div>
+            <div class="cardnum" id ="cardnum"></div>
+            <div class="cardnumr" id ="cardnumr"></div>
+        
+        </div>
+        <script type="text/javascript">
+ 
+          function getOption() {
+              cardno = document.querySelector('.num');
+              cardsuit=document.querySelector('.suit');
+              output1 = cardno.value;
+              output2 = cardsuit.value;
+              if (output2 == '♥' || output2 == '♦')
+              {
+                document.getElementById("card").style.color = "red";
+                document.querySelector('.card').textContent = output2;
+                document.querySelector('.cardnum').textContent = output1;
+                document.querySelector('.cardnumr').textContent = output1;
+                document.getElementById("cardnum").style.color = "red";
+                document.getElementById("cardnumr").style.color = "red";
+              }
+              else
+              {document.querySelector('.card').textContent = output2;
+              document.getElementById("card").style.color = "black";
+              document.querySelector('.cardnum').textContent = output1;
+                document.querySelector('.cardnumr').textContent = output1;
+           
+                document.getElementById("cardnum").style.color = "black";
+                document.getElementById("cardnumr").style.color = "black";   }
+             
+              if (output1!="" && output2!=""){
+                
+                localStorage.setItem("keynum",output1); //keynum is the localstorage 
+                localStorage.setItem("keysuit",output2); //keysuit is the local storage
+              }
+        
+          }
+          </script>
+      </article>
+
+
+
+      <article class="car">
+        <header class="car-header">
+          <p>CARD 2</p>
+          <h2>First card</h2>
+        </header>
+        <div class="tags">
+          <select class="drop numf" onclick="getOptionf()"required >
+            <option disabled selected hidden value="" >Number</option>
+            <option value="A">A</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="J">J</option>
+            <option value="Q">Q</option>
+            <option value="K">K</option>
+            
+
+          </select>
+          <select class="drop suitf"  onclick="getOptionf()" required>
+            <option disabled selected hidden value="" >Suits</option>
+            <option value="♣">♣ Clubs</option>
+            <option value="♦">♦ Diamond</option>
+            <option value="♥">♥ Heart</option>
+            <option value="♠">♠ Spades</option>
+          </select>
+         
+
+          </div>
+          
+        <div class="single">
+            <div class="deck cardf" id="cardf"></div>
+            <div class="cardnumf" id ="cardnumf"></div>
+            <div class="cardnumrf" id ="cardnumrf"></div>
+        
+        </div>
+        <script type="text/javascript">
+ 
+          function getOptionf() {
+              cardno = document.querySelector('.numf');
+              cardsuit=document.querySelector('.suitf');
+              output1 = cardno.value;
+              output2 = cardsuit.value;
+              if (output2 == '♥' || output2 == '♦')
+              {
+                document.getElementById("cardf").style.color = "red";
+                document.querySelector('.cardf').textContent = output2;
+                document.querySelector('.cardnumf').textContent = output1;
+                document.querySelector('.cardnumrf').textContent = output1;
+                document.getElementById("cardnumf").style.color = "red";
+                document.getElementById("cardnumrf").style.color = "red";
+              }
+              else
+              {document.querySelector('.cardf').textContent = output2;
+              document.getElementById("cardf").style.color = "black";
+              document.querySelector('.cardnumf').textContent = output1;
+                document.querySelector('.cardnumrf').textContent = output1;
+           
+                document.getElementById("cardnumf").style.color = "black";
+                document.getElementById("cardnumrf").style.color = "black";   }
+             
+        
+                if (output1!="" && output2!=""){
+                
+                localStorage.setItem("firstnum",output1); 
+                localStorage.setItem("firstsuit",output2); 
+              }
+        
+          }
+          </script>
+      
+      </article>
+
+
+
+      <article class="car">
+        <header class="car-header">
+          <p>CARD 3</p>
+          <h2>Second Card</h2>
+        </header>
+        <div class="tags">
+          <select class="drop nums" onclick="getOptions()" required>
+            <option disabled selected hidden value="" >Number</option>
+            <option value="A">A</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="J">J</option>
+            <option value="Q">Q</option>
+            <option value="K">K</option>
+            
+
+          </select>
+          <select class="drop suits"  onclick="getOptions()" required>
+            <option disabled selected hidden value="" >Suits</option>
+            <option value="♣">♣ Clubs</option>
+            <option value="♦">♦ Diamond</option>
+            <option value="♥">♥ Heart</option>
+            <option value="♠">♠ Spades</option>
+          </select>
+         
+
+          </div>
+          
+        <div class="single">
+            <div class="deck cards" id="cards"></div>
+            <div class="cardnums" id ="cardnums"></div>
+            <div class="cardnumrs" id ="cardnumrs"></div>
+        
+        </div>
+        <script type="text/javascript">
+ 
+          function getOptions() {
+              cardno = document.querySelector('.nums');
+              cardsuit=document.querySelector('.suits');
+              output1 = cardno.value;
+              output2 = cardsuit.value;
+              if (output2 == '♥' || output2 == '♦')
+              {
+                document.getElementById("cards").style.color = "red";
+                document.querySelector('.cards').textContent = output2;
+                document.querySelector('.cardnums').textContent = output1;
+                document.querySelector('.cardnumrs').textContent = output1;
+                document.getElementById("cardnums").style.color = "red";
+                document.getElementById("cardnumrs").style.color = "red";
+              }
+              else
+              {document.querySelector('.cards').textContent = output2;
+              document.getElementById("cards").style.color = "black";
+              document.querySelector('.cardnums').textContent = output1;
+                document.querySelector('.cardnumrs').textContent = output1;
+           
+                document.getElementById("cardnums").style.color = "black";
+                document.getElementById("cardnumrs").style.color = "black";   }
+             
+                if (output1!="" && output2!=""){
+                
+                localStorage.setItem("secondnum",output1); 
+                localStorage.setItem("secondsuit",output2); 
+              }
+        
+          }
+          </script>
+      </article>
+
+      <article class="car">
+        <header class="car-header">
+          <p>CARD 4</p>
+          <h2>Third Card</h2>
+        </header>
+        <div class="tags">
+          <select class="drop numt" onclick="getOptiont()"  required>
+            <option disabled selected hidden value="" >Number</option>
+            <option value="A">A</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="J">J</option>
+            <option value="Q">Q</option>
+            <option value="K">K</option>
+            
+
+          </select>
+          <select class="drop suitt"  onclick="getOptiont()" required>
+            <option disabled selected hidden value="" >Suits</option>
+            <option value="♣">♣ Clubs</option>
+            <option value="♦">♦ Diamond</option>
+            <option value="♥">♥ Heart</option>
+            <option value="♠">♠ Spades</option>
+          </select>
+         
+
+          </div>
+          
+        <div class="single">
+            <div class="deck cardt" id="cardt"></div>
+            <div class="cardnumt" id ="cardnumt"></div>
+            <div class="cardnumrt" id ="cardnumrt"></div>
+        
+        </div>
+        <script type="text/javascript">
+ 
+          function getOptiont() {
+              cardno = document.querySelector('.numt');
+              cardsuit=document.querySelector('.suitt');
+              output1 = cardno.value;
+              output2 = cardsuit.value;
+              if (output2 == '♥' || output2 == '♦')
+              {
+                document.getElementById("cardt").style.color = "red";
+                document.querySelector('.cardt').textContent = output2;
+                document.querySelector('.cardnumt').textContent = output1;
+                document.querySelector('.cardnumrt').textContent = output1;
+                document.getElementById("cardnumt").style.color = "red";
+                document.getElementById("cardnumrt").style.color = "red";
+              }
+              else
+              {document.querySelector('.cardt').textContent = output2;
+              document.getElementById("cardt").style.color = "black";
+              document.querySelector('.cardnumt').textContent = output1;
+                document.querySelector('.cardnumrt').textContent = output1;
+           
+                document.getElementById("cardnumt").style.color = "black";
+                document.getElementById("cardnumrt").style.color = "black";   }
+             
+                if (output1!="" && output2!=""){
+                
+                localStorage.setItem("thirdnum",output1); 
+                localStorage.setItem("thirdsuit",output2); 
+              }
+        
+          }
+          </script>
+
+      
+
+      
+
+ </section>
+<div class="bottom">
+<a href="www.te.com"><button class="botbutton home" href="">
+  home
+</button></a>
+
+<button class ="botbutton proceed" style="margin-left:77rem; ">
+  proceed
+</button>
+</div>
+      </form>
+  </body>
+  </head>
+</html>
