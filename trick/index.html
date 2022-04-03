@@ -11,7 +11,7 @@
   
   <body>
       <h1 style="text-align: center; margin-top:30px; margin-bottom: 0px;">Let's try a magic!!</h1>
-      <form name="form1" action="next.html" method="get">
+      <form name="form1" action="next.html" onsubmit="return validate()" method="get">
  <section class="car-list">
       <article class="car">
         <header class="car-header">
@@ -332,11 +332,12 @@
   home
 </button></a>
 
-<button class ="botbutton proceed" style="margin-left:77rem; ">
+<button class ="botbutton proceed" style="margin-left:77rem; " type="submit">
   proceed
 </button>
 </div>
       </form>
   </body>
+ 
   </head>
 </html>
