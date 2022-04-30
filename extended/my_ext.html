@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
+        @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+        body {
+            display: inline;
+        }
+        /* button{
+            display: 
+        } */
+
+        /* .data{
+
+        } */
+        button {
+            height: 5vh;
+            border: 2px solid black;
+            background-color: rgba(24, 70, 224, 0.598);
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        h2 {
+            color: rgba(33, 76, 216, 0.688);
+        }
+
+        h2:hover {
+            color: rgb(243, 162, 12);
+            font-family: 'Germania One', cursive;
+            cursor: pointer;
+        }
+
+        .overview {
+            position: relative;
+            font-size: 20px;
+            top: -13px;
+        }
+
+        p {
+            /* cursor: pointer; */
+            cursor: default;
+            text-indent: 50px;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        p.points {
+            /* cursor: pointer; */
+            text-indent: 0px;
+        }
+
+        .first{
+            height: 3vh;
+            width: 4vw;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <button><a href="my_ext1.html">1st Combination</a><br></button>
+    <button><a href="my_ext2.html">2nd Combination</a><br></button>
+    <button><a href="my_ext3.html">3rd Combination</a><br></button>
+    <button><a href="my_ext4.html">4th Combination</a><br></button>
+    <button><a href="my_ext5.html">5th Combination</a><br></button>
+    <button><a href="my_ext6.html">6th Combination</a><br></button>
+    <br>
+    <div>
+        <h2>Common Misconceptions</h2>
+        <p class="overview"><br>
+            1. Assumption that atleast one pigeon is present in every pigeonhole.<br>
+            2. It does not say which piegeon is present.<br>
+            3. It does not say which piegeonhole has 2 or more pigeons in basic or minimum of how many in extended.</p>
+
+        <h2>Illustration</h2>
+        <p class="overview">
+            Here if we consider the colors as the pigeons and the boxes as the pigeonholes then according to the
+            pigeonhole principle:<br>
+            1. Basic principle states that there are atleast 2 or more colors in atleast 1 pigeonhole.<br>
+            2. Extended principle states that there is atleast 3 or more colors in atleast 1 piegeonhole.<br>
+
+            This holds true for any ways of selection or combination where in each and every combination there will be
+            atleast one container having 3 or more colors.<br>
+            <br>
+        <pre>
+            Given:
+
+             n = number of colors = 5
+
+             m = number of containers = 2
+            
+            Using Formula: 
+
+            ⌈n / m⌉ or ⌊(n − 1) / m⌋ + 1
+
+            ⌈5 / 2⌉ or ⌊(5 − 1) / 2⌋ + 1 
+
+            ⌈2.5⌉ or  ⌊2⌋ + 1 = 3
+        </pre>
+        </p>
+    <!-- <div class="data">
+        </div class="pigeonhole">
+        <div class="first"></div>
+        <div class="second"></div>
+        </div>
+
+        <div class="pigeons">
+            <div class="third"></div>
+            <div class="fourth"></div>
+            <div class="fifth"></div>
+            <div class="sixth"></div>
+            <div class="seventh"></div>
+        </div> -->
+
+    </div>
+</body>
+
+</html>

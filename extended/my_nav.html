@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
+      @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+        * {
+            margin: 0;
+            padding: 0;
+            /* background: fixed;
+            background-image: url("img/Screenshot\ \(80\).png");
+            background-repeat: no-repeat;
+            background-size: cover; */
+            /* font-family: "Poppins", sans-serif; */
+        }
+
+        .font1{
+            font-family: 'Germania One', cursive;
+        }
+        header {
+            margin: 0;
+            padding: 0;
+        }
+
+        header #navigation {
+            /* background-color: rgba(48, 47, 47, 0.719);
+             */
+            /* background: linear-gradient(to right, gray ); */
+            width: 100vw;
+            height: 8vh;
+            /* background-image: linear-gradient(to right, #a7e6e6 0%, rgb(22, 159, 223), rgba(15, 73, 182, 0.68)); */
+            background-color: rgba(18, 80, 186, 0.626);
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            display: inline-flex;
+            color: black;
+            /* color: white; */
+            padding-top: 22px;
+            padding-left: 30px;
+            font-size: large;
+
+        }
+
+        li:link {
+            font-style: normal;
+        }
+
+        li:hover {
+            font-style: italic;
+            color: rgb(234, 161, 34);
+            cursor: pointer;
+            color: white
+        }
+
+        /* header {
+            font-size: 50px;
+            text-align: center;
+            text-shadow: 2px 2px;
+            color: rgb(0, 68, 255);
+
+        } */
+
+        h2 {
+            color: rgba(33, 76, 216, 0.688);
+        }
+
+        h2:hover {
+            color: rgb(243, 162, 12);
+            font-family: 'Germania One', cursive;
+            cursor: pointer;
+        }
+
+        .overview {
+            position: relative;
+            font-size: 20px;
+            top: -13px;
+        }
+
+        p {
+            /* cursor: pointer; */
+            cursor: default;
+            text-indent: 50px;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        p.points {
+            /* cursor: pointer; */
+            text-indent: 0px;
+        }
+
+        img {
+            /* position: relative; */
+            left: 520px;
+            top: 43px;
+
+        }
+
+        /* a:link {
+            color: rgb(0, 68, 255);
+            text-decoration: none;
+
+        } */
+        .content {
+            margin: 4px;
+            padding: 20px;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .heading {
+            text-align: center;
+            font-size: xx-large;
+        }
+
+        .pic{
+            /* overflow: hidden; */
+            width: 100vw;
+            height: 50vh;
+            /* padding-left: 50%;
+            padding-right: 50%; */
+            margin-left: 25%;
+            margin-right: auto;
+            float: left;
+            /* background-color: dimgrey; */
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav id="navigation">
+            <ul>
+                <li a href="#" id="home">Home</li>
+                <li a href="#" id="example">Example</li>
+                <li a href="#" id="bonus">Bonus</li>
+                <li a href="#" id="about">About Us</li>
+                <li a href="#" id="feedback">Feedback</li>
+                <li a href="#" id="feedback">Contact</li>
+            </ul>
+
+        </nav>
+
+
+    </header>
+    <div>
+        <p class="heading font1" >Pigeonhole Principle</p>
+        <!-- <img src="pigeon-dove.gif" alt="" width="80px " class="center"> -->
+    </div>
+    <section class="content">
+        <div id="introduction">
+
+
+            <h2>Overview</h2>
+            <p class="overview">
+                <br>
+                The pigeonhole principle (also sometimes called the Dirichlet drawer principle) is a
+                simple yet powerful idea in mathematics that can be used to show some surprising things, as we&#8217;ll
+                see later. In this article, we&#8217;ll first define what the pigeonhole principle is, followed by some
+                examples to illustrate how it can be applied.
+                Then we&#8217;ll discuss the generalized version of the principle and give several examples that use the
+                generalized version. Finally, we&#8217;ll show some particularly clever applications that make use of
+                the pigeonhole principle.
+            </p>
+
+            <br>
+             <div><h2>The Basic Pigeonhole Principle</h2></div>
+
+            <p class="overview ">
+                <br>
+                In this section, we’ll first define the basic pigeonhole principle and prove it. Then
+                we’ll show three examples that use this basic principle..
+                <br><br>Generalized pigeonhole principle:<br>
+                1. If n pigeons occupy m pigeon holes and n > m then there exists atleast one pigeon hole    that will have atleast 2 pigeons.<br>
+                2. If m > n i.e., number of pigeon holes is greater than the number of pigeons then it is a contradiction.
+            </p><br><br><br><br>
+            <div class="pic"><img src="principle.png" alt="image" width="700" height="300"></div>
+            <h2>Some Examples of Pigeonhole Principle</h2>
+            <p class="overview points">
+                <br>
+                1. Two or more people reading this blog will have the same birthday. <br>
+                2. If you pick five cards from a standard deck of 52 cards, then at least two will be of the same suit.
+                <br>
+                3. Sorting the numbers using Pigeon-hole
+            </p>
+
+            <h2>Extended Pigeonhole Principle</h2>
+            <p class="overview">
+                <br>
+                It states that if n pigeons are occupy m pigeonholes (The number of pigeons is very large than the number of pigeonholes), then atleast one of the pigeonholes must contain <br>
+                ⌈n/m⌉ or ⌊(n−1)/m⌋ + 1 pigeons.
+
+            </p>
+
+
+        </div>
+
+        <div>
+            <h2>Common Misconceptions</h2>
+            <p class="overview"><br>
+               1. Assumption that atleast one pigeon is present in every pigeonhole.<br>
+               2. It doesnot say which piegeon is present.<br>
+               3. It doesnot say which piegeonhole has 2 or more pigeons</p>
+        </div>
+    </section>
+</body>
+
+</html>

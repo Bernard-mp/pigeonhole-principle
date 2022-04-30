@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
+ 
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #17141d;
+    color: white;
+    font-family: 'DM Mono', monospace;
+}
+
+a {
+    text-decoration: none;
+}
+
+.car-list {
+    display: flex;
+    padding: 3rem;
+    overflow-x: visible;
+}
+
+.car-list::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+.car-list::-webkit-scrollbar-thumb {
+    background: #201c29;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
+}
+
+.car-list::-webkit-scrollbar-track {
+    background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
+}
+
+
+.car {
+    height: 500px;
+    width: 390px;
+    min-width: 250px;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: #17141d;
+    box-shadow: -1rem 0 3rem #000;
+    display: flex;
+    flex-direction: column;
+    transition: .2s;
+    margin: 0;
+    scroll-snap-align: start;
+    clear: both;
+    position: relative;
+}
+
+
+  
+
+.car:focus-within~.card, .card:hover~.card {
+    transform: translateX(130px);
+}
+
+.car:hover {
+    transform: translateY(-1rem);
+}
+
+.car:not(:first-child) {
+    margin-left: 10px;
+}
+
+
+.car-header {
+    margin-bottom: auto;
+    text-align: center;
+}
+
+.car-header p {
+    font-size: 14px;
+    margin: 0 0 1rem;
+    color: #7a7a8c;
+ 
+}
+
+.car-header h2 {
+    font-size: 20px;
+    margin: 0rem 0 auto;
+    text-decoration: none;
+    color: inherit;
+    border: 0;
+    display: inline-block;
+    cursor: pointer;
+    color:lightcoral;
+    
+  
+}
+
+.car-header h2:hover {
+    background: linear-gradient(90deg,#ff8a00,#e52e71);
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.single {
+    margin: 3rem 0 0;
+    display: grid;
+  
+  
+    position: relative;
+
+    grid-template-columns: repeat(2, 4rem);
+    grid-template-rows: 7rem 2rem 7rem;
+   
+    cursor: pointer;
+    justify-content: center;
+   
+}
+
+
+
+
+
+.tags {
+    position: absolute;
+    margin-top: 75px;
+}
+
+.tags .drop  {
+    font-style: normal;
+    font-weight: 700;
+    font-size: .5rem;
+    color: #7a7a8c;
+    text-transform: uppercase;
+    font-size: 1rem;
+    border: 3px solid #28242f;
+    border-radius: 2rem;
+    padding: .2rem .85rem .25rem;
+    padding-left: 20px;
+    position: relative;
+}
+ 
+.bottom{
+    position: absolute;
+    margin-top: -35px;
+}
+.bottom .botbutton  {
+    font-style: normal;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: .5rem;
+    text-align: center;
+    color: #7a7a8c;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    border: 3px solid #28242f;
+    border-radius: 2rem;
+    padding: .2rem .85rem .25rem;
+    padding-left: 18px;
+    position: relative;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    
+}
+.bottom .botbutton:hover {
+    background: linear-gradient(90deg,#ff8a00,#e52e71);
+    
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+   
+   
+    border-color: white;
+}
+
+.proceed{
+
+
+ 
+}
+
+
+
+option {
+  font-style: normal;
+  font-weight: 700;
+  font-size: .5rem;
+  color: #7a7a8c;
+  text-transform: uppercase;
+  font-size: 1rem;
+  border: 3px solid #28242f;
+  border-radius: 2rem;
+  padding: .2rem .85rem .25rem;
+  padding-left: 20px;
+  position: relative;
+}
+
+.tags .drop:hover {
+    background: linear-gradient(90deg,#ff8a00,#e52e71);
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-box-decoration-break: clone;
+    background-clip: text;
+    border-color: white;
+}
+
+
+
+
+.card, .cardf,.cards,.cardt {
+  margin: -100%;
+  position: relative;
+  height: 20rem;
+  width: 15rem;
+  border: 1px solid black;
+  border-radius: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10rem;
+  background-color: whitesmoke;
+  user-select: none;
+  color:#000
+}
+.cardnum,.cardnumf,.cardnums,.cardnumt{
+  display: flex;
+  position: absolute;
+  font-size: 4rem;
+  top: -4rem;
+  left: 2rem;
+  color:#000;
+}
+
+.cardnumr,.cardnumrf,.cardnumrs,.cardnumrt{
+  position: absolute;
+  display: flex;
+  font-size: 4rem;
+  bottom: .5rem;
+  right: 3rem;
+  transform: rotate(180deg);
+  color:#000;
+}
+

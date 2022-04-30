@@ -1,0 +1,233 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Open sans';
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(106, 145, 212,1)
+}
+
+body > * {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+.wrapper {
+  width: 700px;
+  background: #FFF;
+  border-radius:  10px;
+  box-shadow: 0 25px 70px rgba(0,0,0,.05);
+  overflow: hidden;
+}
+
+h1.title {
+  padding: 15px 0;
+  margin-left: 25px;
+  font-weight: normal;
+  color: rgba(106, 145, 212,1)
+}
+
+.form {
+  width: 700px;
+}
+
+.myform {
+  background: #F4F5F7;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25px
+}
+
+.myform label {
+  display: block;
+  color: #A8AAC5;
+  font-weight: bold;
+  font-size: .8rem;
+  margin-bottom: 10px;
+}
+
+.myform input {
+  border: 0;
+  outline: 0;
+  height: 50px;
+  background: #FFF;
+  width: 100%;
+  border-radius: 5px;
+  color: rgba(106, 145, 212,1);
+  font-weight: 700;
+  font-size: .9rem;
+  text-indent: 15px;
+  border: 2px solid transparent;
+  transition: border 250ms;
+}
+ #radio_experience{
+   width: 10%;
+ }
+.full-width {
+  grid-column: -1 / 1
+}
+
+.button {
+  grid-column: -1 / 1;
+  display: flex;
+  justify-content: center;
+}
+
+.button button {
+  border: 0;
+  outline: 0;
+  width: 120px;
+  height: 50px;
+  border-radius: 50px;
+  color: #FFF;
+  font-weight: bold;
+  font-size: .9rem;
+  cursor: pointer;
+  background: linear-gradient(356deg,rgba(106, 145, 212,1) 0%, rgba(87,50,173,1) 100%);
+}
+
+.button button:hover {
+  background: rgba(106, 145, 212,1);
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+  
+  .font1{
+      font-family: 'Germania One', cursive;
+  }
+  
+
+  header #navigation {
+      /* background-color: rgba(48, 47, 47, 0.719);
+       */
+      /* background: linear-gradient(to right, gray ); */
+      
+      height: 8vh;
+      /* background-image: linear-gradient(to right, #a7e6e6 0%, rgb(22, 159, 223), rgba(15, 73, 182, 0.68)); */
+      background-color: transparent;
+      margin: 0;
+      padding: 0;
+      color: bisque;
+  }
+
+  ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+  }
+
+  ul li {
+      display: inline-flex;
+      color: white;
+      /* color: white; */
+      padding-top: 22px;
+      padding-left: 30px;
+      font-size: large;
+
+  }
+ 
+  li:link {
+      font-style: normal;
+  }
+
+  li:hover {
+      font-style: italic;
+      color: rgb(234, 161, 34);
+      cursor: pointer;
+      color: white
+  }
+
+  /* header {
+      font-size: 50px;
+      text-align: center;
+      text-shadow: 2px 2px;
+      color: rgb(0, 68, 255);
+
+  } */
+
+  h2 {
+      color: rgba(33, 76, 216, 0.688);
+  }
+
+  h2:hover {
+      color: rgb(243, 162, 12);
+      font-family: 'Germania One', cursive;
+      cursor: pointer;
+  }
+
+  .overview {
+      position: relative;
+      font-size: 20px;
+      top: -13px;
+  }
+
+  p {
+      /* cursor: pointer; */
+      cursor: default;
+      text-indent: 50px;
+      text-align: justify;
+      text-justify: inter-word;
+  }
+
+  p.points {
+      /* cursor: pointer; */
+      text-indent: 0px;
+  }
+
+  img {
+      /* position: relative; */
+      left: 520px;
+      top: 43px;
+
+  }
+
+  /* a:link {
+      color: rgb(0, 68, 255);
+      text-decoration: none;
+
+  } */
+  .content {
+      margin: 4px;
+      padding: 20px;
+  }
+
+  .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .heading {
+      text-align: center;
+      font-size: xx-large;
+  }
+
+  .pic{
+      /* overflow: hidden; */
+      width: 100vw;
+      height: 50vh;
+      /* padding-left: 50%;
+      padding-right: 50%; */
+      margin-left: 25%;
+      margin-right: auto;
+      float: left;
+      /* background-color: dimgrey; */
+  }
+  a{
+      text-decoration: none;
+  }
